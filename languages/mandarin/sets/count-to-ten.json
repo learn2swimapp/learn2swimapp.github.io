@@ -1,0 +1,26 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/zh",
+    "dataCompiler": "Steven Alexander Livingston",
+    "fluentSpeaker": false,
+    "dateCreated": "09/10/2022",
+    "dateEdited": "09/10/2022",
+    "baseLanguage": "en",
+    "targetLanguage": "zh",
+    "gendersIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "mandarin/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/chinese-mandarin-simplified/",
+    "words": {
+        "one": "一",
+        "two": "二",
+        "three": "三",
+        "four": "四",
+        "five": "五",
+        "six": "六",
+        "seven": "七",
+        "eight": "八",
+        "nine": "九",
+        "ten": "十"
+    }
+}

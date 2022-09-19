@@ -1,0 +1,16 @@
+{
+    "autoTranslated": true,
+    "source": "https://translate.google.com/?sl=en&tl=es&op=translate",
+    "compiler": "Steven Alexander Livingston",
+    "dateCreated": "09/09/2022",
+    "dateEdited": "09/09/2022",
+    "baseLanguage": "en",
+    "targetLanguage": "es",
+    "gendersIncluded": true,
+    "words": {
+        "hello": "hola"
+    },
+    "genders": {
+        "hello": "female"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "standardSet": false,
+    "autoTranslated": false,
+    "source": "https://www.howtosayinchinese.com/simple-easy-basic-chinese-verbs-list/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "09/16/2022",
+    "dateEdited": "09/16/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "checkedByFluentSpeaker": false,
+    "baseLanguage": "en",
+    "targetLanguage": "zh",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "chinese/top-150-verbs",
+    "audioSource": "https://micmonster.com/text-to-speech/chinese-mandarin-simplified/",
+    "words": {
+        "to be able": ["能", "能够"],
+        "to accept": ["接受"],
+        "to add": ["加", "补充"],
+        "to admit": ["承认"],
+        "to agree": ["同意", "赞成", "答应"],
+        "to allow": ["允许", "让"],
+        "to apologize": ["道歉"],
+        "to appear": ["出现", "显得"],
+        "to apply": ["申请"],
+        "to arrive": ["到"],
+        "to ask": ["问"],
+        "to attend": ["出席", "参加"]
+    }
+}

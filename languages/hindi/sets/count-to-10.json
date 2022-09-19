@@ -1,0 +1,28 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/hi/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "09/10/2022",
+    "dateEdited": "09/10/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "baseLanguage": "en",
+    "targetLanguage": "hi",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "hindi/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/hindi-india/",
+    "words": {
+        "one": "एक",
+        "two": "दो",
+        "three": "तीन",
+        "four": "चार",
+        "five": "पांच",
+        "six": "छह",
+        "seven": "सात",
+        "eight": "आठ",
+        "nine": "नौ",
+        "ten": "दस"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/sq",
+    "dataCompiler": "Steven Alexander Livingston",
+    "fluentSpeaker": false,
+    "dateCreated": "09/09/2022",
+    "dateEdited": "09/09/2022",
+    "baseLanguage": "en",
+    "targetLanguage": "sq",
+    "gendersIncluded": false,
+    "audiosIncluded": false,
+    "audioSource": null,
+    "words": {
+        "red": "kuq",
+        "orange": "portokall",
+        "yellow": "verdhë",
+        "green": "gjelbër",
+        "blue": ""
+    }
+}

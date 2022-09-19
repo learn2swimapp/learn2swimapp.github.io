@@ -1,0 +1,40 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/am/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "09/10/2022",
+    "dateEdited": "09/10/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "baseLanguage": "en",
+    "targetLanguage": "am",
+    "englishPronunciationsIncluded": true,
+    "audiosIncluded": true,
+    "audioRoot": "amharic/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/amharic-ethiopia/",
+    "words": {
+        "one": "አንድ",
+        "two": "ሁለት",
+        "three": "ሦስት",
+        "four": "አራት",
+        "five": "አምስት",
+        "six": "ስድስት",
+        "seven": "ሰባት",
+        "eight": "ስምንት",
+        "nine": "ዘጠኝ",
+        "ten": "ዐሥር"
+    },
+    "englishPronunciations": {
+        "one": "a'nd",
+        "two": "hulet",
+        "three": "sost",
+        "four": "arat",
+        "five": "amst",
+        "six": "s'dst",
+        "seven": "sabat",
+        "eight": "s'mnt",
+        "nine": "zt'ain",
+        "ten": "asser"
+    }
+}

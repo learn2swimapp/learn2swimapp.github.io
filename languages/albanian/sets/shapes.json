@@ -1,0 +1,12 @@
+{
+    "words": {
+        "square": "katror",
+        "circle": "rreth",
+        "triangle": "trekëndëshi"
+    },
+    "genders": {
+        "square": true,
+        "circle": true,
+        "triangle": true
+    }
+}

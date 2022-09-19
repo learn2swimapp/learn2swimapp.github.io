@@ -1,0 +1,30 @@
+{
+    "standardSet": false,
+    "autoTranslated": false,
+    "source": "https://storylearning.com/learn/russian/russian-tips/essential-russian-verbs",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "09/17/2022",
+    "dateEdited": "09/17/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "checkedByFluentSpeaker": false,
+    "baseLanguage": "en",
+    "targetLanguage": "zh",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "chinese/top-150-verbs",
+    "audioSource": "https://micmonster.com/text-to-speech/chinese-mandarin-simplified/",
+    "words": {
+        "to be": ["Быть"],
+        "to take": ["брать", "взять"],
+        "to know": ["Знать"],
+        "to be able": ["мочь", "смочь"],
+        "to want": ["хотеть", "захотеть"],
+        "to speak": ["говорить", "сказать"],
+        "to give": ["давать", "дать"],
+        "to do": ["делать", "сделать"],
+        "to understand": ["понимать", "понять"],
+        "to eat"
+    }
+}
