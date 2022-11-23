@@ -1,0 +1,29 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/bn/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "11/23/2022",
+    "dateEdited": "11/23/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "bn",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "belarusian/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/bengali-india/",
+    "words": {
+        "one": "এক",
+        "two": "দুই",
+        "three": "তিন",
+        "four": "চার",
+        "five": "পাঁচ",
+        "six": "ছয়",
+        "seven": "সাত",
+        "eight": "আট",
+        "nine": "নয়",
+        "ten": "দশ"
+    }
+}
