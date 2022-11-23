@@ -1,0 +1,29 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/eu/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "11/22/2022",
+    "dateEdited": "11/22/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "eu",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "basque/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/basque/",
+    "words": {
+        "one": "bat",
+        "two": "bi",
+        "three": "hiru",
+        "four": "lau",
+        "five": "bost",
+        "six": "sei",
+        "seven": "zazpi",
+        "eight": "zortzi",
+        "nine": "bederatzi",
+        "ten": "hamar"
+    }
+}

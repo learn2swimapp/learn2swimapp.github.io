@@ -1,0 +1,29 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/hy/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "11/22/2022",
+    "dateEdited": "11/22/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "hy",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "armenian/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/armenian-armenia/",
+    "words": {
+        "one": "մեկ",
+        "two": "երկու",
+        "three": "երեք",
+        "four": "չորս",
+        "five": "հինգ",
+        "six": "վեց",
+        "seven": "յոթ",
+        "eight": "ութ",
+        "nine": "ինը",
+        "ten": "տասը"
+    }
+}
