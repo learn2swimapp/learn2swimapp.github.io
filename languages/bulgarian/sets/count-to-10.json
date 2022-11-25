@@ -1,0 +1,29 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/bg/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "11/24/2022",
+    "dateEdited": "11/24/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "bg",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "bulgarian/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/bulgarian-bulgaria/",
+    "words": {
+        "one": "един",
+        "two": "две",
+        "three": "три",
+        "four": "четири",
+        "five": "пет",
+        "six": "шест",
+        "seven": "седем",
+        "eight": "осем",
+        "nine": "девет",
+        "ten": "десет"
+    }
+}
