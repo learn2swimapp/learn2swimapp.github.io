@@ -1,0 +1,29 @@
+{
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/bs/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "11/24/2022",
+    "dateEdited": "11/24/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "bs",
+    "englishPronunciationsIncluded": false,
+    "audiosIncluded": true,
+    "audioRoot": "bosnian/count-to-10",
+    "audioSource": "https://micmonster.com/text-to-speech/bosnian-bosnia/",
+    "words": {
+        "one": "jedan",
+        "two": "dva",
+        "three": "tri",
+        "four": "četiri",
+        "five": "pet",
+        "six": "šest",
+        "seven": "sedam",
+        "eight": "osam",
+        "nine": "devet",
+        "ten": "deset"
+    }
+}
