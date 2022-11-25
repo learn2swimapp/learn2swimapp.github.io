@@ -12,7 +12,7 @@
     "targetLanguage": "bn",
     "englishPronunciationsIncluded": false,
     "audiosIncluded": true,
-    "audioRoot": "belarusian/count-to-10",
+    "audioRoot": "bengali/count-to-10",
     "audioSource": "https://micmonster.com/text-to-speech/bengali-india/",
     "words": {
         "one": "এক",
