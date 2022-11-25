@@ -20,19 +20,19 @@
             <a class="navbar-brand" href="/">Learn2Swim <img src="/assets/flags/saudi-arabia.png" class="flag"></a>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home <i class="fa fa-home"></i></a>
+              <a class="nav-link" href="#">Home <i class="fa fa-home nav-icon"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About <i class="fa fa-user"></i></a>
+              <a class="nav-link" href="#">About <i class="fa fa-user nav-icon"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Languages <i class="fa fa-language"></i></a>
+              <a class="nav-link" href="#">Languages <i class="fa fa-language nav-icon"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Socials <i class="fa fa-instagram"></i></a>
+              <a class="nav-link" href="#">Socials <i class="fa fa-instagram nav-icon"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Donate <i class="fa fa-dollar"></i></a>
+              <a class="nav-link" href="#">Donate <i class="fa fa-dollar nav-icon"></i></a>
             </li>
           </ul>
         </div>
@@ -42,7 +42,7 @@
     <h1 class="title">Loading <div class="spinner-border text-dark"></div></h1>
     <div class="question-div">
         <h3 class="question-title"><span class="question">Please Translate the Following from Arabic</span> <span class="flag">🇸🇦</span></h3>
-        <h4 class="tt">Loading..<i class="volume-up"></i></h4>
+        <h4><span class="tt">Loading...</span><i class="volume-up" style="padding-left:100px;"></i></h4>
         <div class="form__group field">
           <input class="form__field" name="name" id="name" autocomplete="off">
           <label for="main" class="form__label">Your Answer Below</label>
@@ -112,7 +112,8 @@
   position: relative;
   display: inline-block;
   
-  padding:20px;
+  padding-top: 20px;
+  padding-left: 20px;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
@@ -188,7 +189,7 @@
         from {transform: rotateY(0deg);}
         to {transform: rotateY(1080deg);}
     }
-    .fa:hover {
+    .nav-icon:hover {
         animation-name: flip;
         animation-duration: .5s;
     }
@@ -294,7 +295,7 @@ function generateQuestion() {
    })
 });
     $("#hidden").click()
-    $(".tt").html(`${word}<span class="tooltiptext">${answer}</span> <i class="fa fa-volume-up" onclick="audio.play()"></i>`)
+    $(".tt").html(`${word}<span class="tooltiptext">${answer}</span> <i class="fa fa-volume-up" style="padding-left:20px;" onclick="audio.play()"></i>`)
     $('.form__field').keypress(e => {
       const key = e.which;
       if (key == 13) {
