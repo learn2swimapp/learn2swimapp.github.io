@@ -108,6 +108,7 @@ let questionAudio;
           );
         });
         $(".divider").append("test");
+        twemoji.parse(document.body, {folder: "svg", ext: ".svg"})
       });
 
       //Regenerate question
