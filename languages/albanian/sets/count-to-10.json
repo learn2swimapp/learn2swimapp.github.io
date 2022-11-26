@@ -1,10 +1,17 @@
 {
+    "title": "Count to 10 in Albanian",
+    "titleIcon": "calculator",
+    "flagEmoji": "🇦🇱",
+    "flagPath": "/assets/flags/albania.png",
+    "languageName": "Albanian",
+    "formMainColor": "#B80F0A",
+    "formSecondaryColor": "#800000",
     "autoTranslated": false,
     "source": "https://glosbe.com/en/sq/",
     "dataCompiler": "Steven Alexander Livingston",
     "dataEditors": ["Steven Alexander Livingston"],
     "dateCreated": "11/22/2022",
-    "dateEdited": "11/22/2022",
+    "dateEdited": "11/25/2022",
     "editLog": [""],
     "fluentSpeaker": false,
     "fluentSpeakerVerified": false,
@@ -25,5 +32,18 @@
         "eight": "tetë",
         "nine": "nëntë",
         "ten": "dhjetë"
-    }
+    },
+    "partsOfSpeech": {
+        "one": ["number", "num."],
+        "two": ["number", "num."],
+        "three": ["number", "num."],
+        "four": ["number", "num."],
+        "five": ["number", "num."],
+        "six": ["number", "num."],
+        "seven": ["number", "num."],
+        "eight": ["number", "num."],
+        "nine": ["number", "num."],
+        "ten": ["number", "num."]
+    },
+    "videoSources": ["https://www.youtube.com/shorts/lK7AwGVcr8Q", ""]
 }

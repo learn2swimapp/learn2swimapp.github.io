@@ -1,14 +1,17 @@
 {
     "title": "Count to 10 in Arabic",
-    "bootstrapColorScheme": "success",
-    "flag": "🇸🇦",
-    "languageWord": "Arabic",
+    "titleIcon": "calculator",
+    "flagEmoji": "🇸🇦",
+    "flagPath": "/assets/flags/saudi-arabia.png",
+    "languageName": "Arabic",
+    "formMainColor": "#059033",
+    "formSecondaryColor": "#FBFCF8",
     "autoTranslated": false,
     "source": "https://glosbe.com/en/ar/",
     "dataCompiler": "Steven Alexander Livingston",
     "dataEditors": ["Steven Alexander Livingston"],
     "dateCreated": "09/10/2022",
-    "dateEdited": "09/23/2022",
+    "dateEdited": "09/26/2022",
     "editLog": [""],
     "fluentSpeaker": false,
     "baseLanguage": "en",
@@ -28,5 +31,17 @@
         "eight": "ثمانية",
         "nine": "تسعة",
         "ten": "عشرة"
+    },
+    "partsOfSpeech": {
+        "one": ["number", "num."],
+        "two": ["number", "num."],
+        "three": ["number", "num."],
+        "four": ["number", "num."],
+        "five": ["number", "num."],
+        "six": ["number", "num."],
+        "seven": ["number", "num."],
+        "eight": ["number", "num."],
+        "nine": ["number", "num."],
+        "ten": ["number", "num."]
     }
 }

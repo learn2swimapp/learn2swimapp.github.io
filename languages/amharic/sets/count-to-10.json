@@ -1,4 +1,11 @@
 {
+    "title": "Count to 10 in Amharic",
+    "titleIcon": "calculator",
+    "flagEmoji": "🇪🇹",
+    "flagPath": "/assets/flags/ethiopia.png",
+    "languageName": "Amharic",
+    "formMainColor": "#2E8B57",
+    "formSecondaryColor": "#F9E076",
     "autoTranslated": false,
     "source": "https://glosbe.com/en/am/",
     "dataCompiler": "Steven Alexander Livingston",
@@ -24,6 +31,18 @@
         "eight": "ስምንት",
         "nine": "ዘጠኝ",
         "ten": "ዐሥር"
+    },
+    "partsOfSpeech": {
+        "one": ["number", "num."],
+        "two": ["number", "num."],
+        "three": ["number", "num."],
+        "four": ["number", "num."],
+        "five": ["number", "num."],
+        "six": ["number", "num."],
+        "seven": ["number", "num."],
+        "eight": ["number", "num."],
+        "nine": ["number", "num."],
+        "ten": ["number", "num."]
     },
     "englishPronunciations": {
         "one": "a'nd",

@@ -1,0 +1,128 @@
+.card {
+    width: 50%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+  }
+
+  .word {
+    position: relative;
+    display: inline-block;
+/*
+    padding-top: 20px;
+    margin-left: 20px;*/
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+  .fullWord {
+    margin-left:20px;
+    margin-top:20px;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 2%;
+  }
+  .question-div {
+    margin: auto;
+    background-color: #f4f0ec;
+    width: 75%;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+  .question-title {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+  }
+  @keyframes rotateswitch {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+  }
+  .flag:hover {
+    animation-name: rotateswitch;
+    animation-duration: 0.08s;
+    animation-iteration-count: 5;
+  }
+  @keyframes flip {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(1080deg);
+    }
+  }
+  .nav-icon:hover {
+    animation-name: flip;
+    animation-duration: 0.5s;
+  }
+  /**/
+  .form__group {
+    position: relative;
+    padding: 15px;
+    margin-top: 25px;
+    width: 50%;
+  }
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    
+    border-image: linear-gradient(to right, var(--formMainColor), var(--formSecondaryColor));
+    
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--formMainColor);
+    font-weight: 700;
+  }
+  /* reset input */
+  .form__field:required,
+  .form__field:invalid {
+    box-shadow: none;
+  }
+  nav {
+    border-radius: 0px 0px 20px 20px;
+  }
+  /* demo */

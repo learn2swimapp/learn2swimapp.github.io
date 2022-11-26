@@ -17,6 +17,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- css sheet -->
+    <link rel="stylesheet" href="quiz.css">
+    <!-- twemoji -->
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
     <title>English Info</title>
   </head>
@@ -55,28 +59,30 @@
         </ul>
       </div>
     </nav>
-
+    <!-- HTML to write -->
     <!---->
-    <h1 class="title">
+    <h1 class="title" title="test">
       Loading
       <div class="spinner-border text-dark"></div>
     </h1>
     <div class="question-div">
       <h3 class="question-title">
-        <span class="question">Please Translate the Following from Arabic</span>
-        <span class="flag">🇸🇦</span>
+        <span class="question">Please Translate the Following from </span>
+        <span class="flagEmoji"></span>
       </h3>
-      <h4>
-        <span class="tt">Loading...</span
-        ><i class="volume-up" style="padding-left: 100px"></i>
+      <h4 class="fullWord">
+        <span class="tt" data-toggle="tooltip" data-bs-placement="top" title="idk">
+        <span class="word">Loading...</span>
+        </span>
+        <i class="fa fa-volume-up" onclick="questionAudio.play()"></i>
       </h4>
       <div class="form__group field">
-        <input class="form__field" name="name" id="name" autocomplete="off" />
+        <input class="form__field" name="name" id="name" autofocus autocomplete="off" />
         <label for="main" class="form__label">Your Answer Below</label>
       </div>
     </div>
     <hr class="divider" />
-    <h2 style="text-align: center">Flashcards <i class="fa fa-card"></i></h2>
+    <h2 style="text-align: center">Flashcards <img width="24px" src="/assets/other-images/notebook.png"></h2>
     <p id="hidden"></p>
     <hr>
     <!-- more set information -->
@@ -97,6 +103,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
+              onclick="regenerate()"
             ></button>
           </div>
 
@@ -111,6 +118,7 @@
               type="button"
               class="btn btn-success"
               data-bs-dismiss="modal"
+              onclick="regenerate()"
             >
               Continue
             </button>
@@ -129,6 +137,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
+              onclick="regenerate()"
             ></button>
           </div>
 
@@ -141,6 +150,7 @@
               type="button"
               class="btn btn-danger"
               data-bs-dismiss="modal"
+              onclick="regenerate()"
             >
               Continue
             </button>
@@ -149,224 +159,5 @@
       </div>
     </div>
   </body>
-  <style>
-    .card {
-      width: 50%;
-      margin-left: 5%;
-      margin-bottom: 3%;
-    }
-
-    .tt {
-      position: relative;
-      display: inline-block;
-
-      padding-top: 20px;
-      padding-left: 20px;
-      text-decoration: underline;
-      text-decoration-style: dotted;
-    }
-
-    .tt .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: #36454f;
-      color: #fff;
-      text-align: center;
-      padding: 3px 0;
-      border-radius: 6px;
-
-      position: absolute;
-      z-index: 1;
-      bottom: 75%;
-      left: 50%;
-      margin-left: -60px;
-
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .tt .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
-
-    .tt:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .title {
-      text-align: center;
-      margin-top: 2%;
-    }
-    .question-div {
-      margin: auto;
-      background-color: #f4f0ec;
-      width: 75%;
-      border-radius: 10px;
-      margin-top: 5%;
-    }
-    .question-title {
-      padding-top: 10px;
-      padding-left: 10px;
-      font-size: 2vw;
-    }
-    @keyframes rotateswitch {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(10deg);
-      }
-      50% {
-        transform: rotate(0deg);
-      }
-      75% {
-        transform: rotate(-10deg);
-      }
-    }
-    .flag:hover {
-      animation-name: rotateswitch;
-      animation-duration: 0.08s;
-      animation-iteration-count: 5;
-    }
-    @keyframes flip {
-      from {
-        transform: rotateY(0deg);
-      }
-      to {
-        transform: rotateY(1080deg);
-      }
-    }
-    .nav-icon:hover {
-      animation-name: flip;
-      animation-duration: 0.5s;
-    }
-    /**/
-    .form__group {
-      position: relative;
-      padding: 15px;
-      margin-top: 10px;
-      width: 50%;
-    }
-    .form__field {
-      font-family: inherit;
-      width: 100%;
-      border: 0;
-      border-bottom: 2px solid #9b9b9b;
-      outline: 0;
-      font-size: 1.3rem;
-      padding: 7px 0;
-      background: transparent;
-      transition: border-color 0.2s;
-    }
-    .form__field::placeholder {
-      color: transparent;
-    }
-    .form__field:placeholder-shown ~ .form__label {
-      font-size: 1.3rem;
-      cursor: text;
-      top: 20px;
-    }
-    .form__label {
-      position: absolute;
-      top: 0;
-      display: block;
-      transition: 0.2s;
-      font-size: 1rem;
-      color: #9b9b9b;
-    }
-    .form__field:focus {
-      padding-bottom: 6px;
-      font-weight: 700;
-      border-width: 3px;
-      border-image: linear-gradient(to right, #11998e, #38ef7d);
-      border-image-slice: 1;
-    }
-    .form__field:focus ~ .form__label {
-      position: absolute;
-      top: 0;
-      display: block;
-      transition: 0.2s;
-      font-size: 1rem;
-      color: #11998e;
-      font-weight: 700;
-    }
-    /* reset input */
-    .form__field:required,
-    .form__field:invalid {
-      box-shadow: none;
-    }
-    nav {
-      border-radius: 0px 0px 20px 20px;
-    }
-    /* demo */
-  </style>
-  <script>
-    $.getJSON("/languages/arabic/sets/count-to-10.json", (data) => {
-      let audio;
-      const loadedData = data;
-      function generateQuestion() {
-        const length = Object.keys(loadedData.words).length;
-        const num = Math.floor(Math.random() * length);
-        const word = Object.values(loadedData.words)[num];
-        const answer = Object.keys(loadedData.words)[num];
-        audio = new Audio(
-          `/assets/audios/${loadedData.audioRoot}/${answer}.mp3`
-        );
-        audio.addEventListener("canplaythrough", () => {
-          audio.play().catch((e) => {
-            window.addEventListener("click", () => {
-              audio.play();
-            });
-          });
-        });
-        $("#hidden").click();
-        $(".tt").html(
-          `${word}<span class="tooltiptext">${answer}</span> <i class="fa fa-volume-up" style="padding-left:20px;" onclick="audio.play()"></i>`
-        );
-        $(".form__field").keypress((e) => {
-          const key = e.which;
-          if (key == 13) {
-            if ($(".form__field").val() === answer) {
-              $("#correct").modal("show");
-              console.log("correct");
-              generateQuestion();
-              $(".form__field").val("");
-            } else {
-              $(".incorrect-text").html(
-                `You answered incorrectly. The correct answer was <span style="text-decoration:underline;">${answer}</span>`
-              );
-              console.log("incorrect");
-              $("#incorrect").modal("show");
-              generateQuestion();
-              $(".form__field").val("");
-            }
-          }
-        });
-      };
-      generateQuestion();
-      const correct = new Audio("/assets/audios/other/correct.wav");
-
-      $(".title").html(loadedData.title);
-      $(document).ready(() => {
-        Object.entries(loadedData.words).forEach((pair) => {
-          $("#hidden").append(
-            `<div class="card"><div class="card-header">${pair[0]}</div><div class="card-body">${pair[1]}</div></div>`
-          );
-          console.log(pair);
-        });
-        $(".divider").append("test");
-      });
-
-      //More set information tab
-      $(".dataCompiler").text(loadedData.dataCompiler)
-    });
-  </script>
+  <script src="quiz.js"></script>
 </html>
