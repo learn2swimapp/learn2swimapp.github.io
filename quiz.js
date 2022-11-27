@@ -8,11 +8,29 @@ let length = Object.keys(loadedData.words).length;
         `/assets/audios/${loadedData.audioRoot}/${answer}.mp3`
       );
       */
+//Stopwatch
+let seconds = 0;
+let minutes = 0;
+setInterval(() => {
+  if (seconds === 60) {
+    seconds = 0
+    minutes++
+  } else {
+    seconds++
+  }
+  time = (minutes < 10) ? "0" + minutes + ":" + seconds : minutes + ":" + seconds
+  $(".time").text(time)
+}, 1000)
+const correctAudio = new Audio('/assets/audios/other/correct.mp3')
+const incorrectAudio = new Audio('/assets/audios/other/incorrect.mp3')
 let length;
 let num;
 let word;
 let answer;
 let questionAudio;
+let correct = 0;
+let incorrect = 0;
+let streak = 0;
     $.getJSON(path, (data) => {
       const loadedData = data;
       length = Object.keys(loadedData.words).length;
@@ -27,7 +45,8 @@ let questionAudio;
       $('.tt').attr("title", answer)
     new bootstrap.Tooltip($(".tt"))
       $(".title").text(loadedData.title);
-      $(".title").append(` <i class="fa fa-${loadedData.titleIcon}"></i>`)
+      $(".tabTitle").text(loadedData.title);
+      $(".title").append(`<img src="${loadedData.titleIcon}" width="40px;" style="margin-top:-7px;">`)
       $(".question").append(loadedData.languageName)
       $(".flagEmoji").text(loadedData.flagEmoji)
       $("html").css("--formMainColor", loadedData.formMainColor)
@@ -51,7 +70,7 @@ let questionAudio;
           })
        });
 
-        const correct = new Audio("/assets/audios/other/correct.wav");
+        //const correct = new Audio("/assets/audios/other/correct.wav");
 
         $("#hidden").click();
 
@@ -66,7 +85,10 @@ let questionAudio;
               console.log($(".form__field").val())
               console.error(answer)
             if ($(".form__field").val() === answer) {
-              //$("#correct").modal("show");
+              streak++
+              correct++
+              $(".streak").text(streak)
+              $(".correct").text(correct)
               console.log("correct");
               length = Object.keys(loadedData.words).length;
       num = Math.floor(Math.random() * length);
@@ -78,8 +100,13 @@ let questionAudio;
       $('.tt').attr("title", answer)
     new bootstrap.Tooltip($(".tt"))
       $('#correct').modal("show")
+      correctAudio.play()
               //$(".form__field").val("")
             } else {
+              streak = 0
+              incorrect++
+              $(".streak").text(streak)
+              $(".incorrect").text(incorrect)
               $(".incorrect-text").html(
                 `You answered incorrectly. The correct answer was <span style="text-decoration:underline;">${answer}</span>`
               );
@@ -95,6 +122,7 @@ let questionAudio;
       $('.tt').attr("title", answer)
     new bootstrap.Tooltip($(".tt"))
       $('#incorrect').modal("show")
+      incorrectAudio.play()
               //$(".form__field").val("");
             }
           }

@@ -22,7 +22,7 @@
     <!-- twemoji -->
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
-    <title>English Info</title>
+    <title class="tabTitle">Loading...</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
@@ -60,7 +60,12 @@
       </div>
     </nav>
     <!--streak correct and incorrect status bar-->
-    <h3 class="current-stats"><span class="streak">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/fire_1f525.png" width="30px" style="margin-top:-7px"> <span class="correct">0</span> ✅ <span class="incorrect">0</span></h3>
+    <h3 class="current-stats">
+      <span class="streak text-warning">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/fire_1f525.png" width="30px" style="margin-top:-7px"> 
+      <span class="correct text-success">0</span>  <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Check%20mark%20button/3D/check_mark_button_3d.png" width="30px" style="margin-top:-7px">
+      <span class="incorrect text-danger">0</span> <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cross%20mark/3D/cross_mark_3d.png" width="30px" style="margin-top:-7px">
+      <span class="time">00:00</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/twelve-oclock_1f55b.png" width="30px" style="margin-top:-7px">
+    </h3>
     <!-- HTML to write -->
     <!---->
     <h1 class="title" title="test">
@@ -76,7 +81,7 @@
         <span class="tt" data-toggle="tooltip" data-bs-placement="top" title="idk">
         <span class="word">Loading...</span>
         </span>
-        <i class="fa fa-volume-up" onclick="questionAudio.play()"></i>
+        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaker-high-volume_1f50a.png" width="30px" onclick="questionAudio.play()"></img>
       </h4>
       <div class="form__group field">
         <input class="form__field" name="name" id="name" autofocus autocomplete="off" />
