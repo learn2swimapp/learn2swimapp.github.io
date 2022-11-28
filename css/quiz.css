@@ -132,3 +132,9 @@
     margin-top: 1%;
     margin-left: 1%;
   }
+  .incorrect-modal button {
+    background-color: #BF0A30
+  }
+  .correct-modal button {
+    background-color: #50C878
+  }
