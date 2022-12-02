@@ -1,12 +1,59 @@
 {
+    "title": "Shapes in Albanian",
+    "titleIcon": "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/star_2b50.png",
+    "flagEmoji": "🇦🇱",
+    "flagPath": "/assets/flags/albania.png",
+    "languageName": "Albanian",
+    "formMainColor": "#B80F0A",
+    "formSecondaryColor": "#800000",
+    "autoTranslated": false,
+    "source": "https://glosbe.com/en/sq/",
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "12/1/2022",
+    "dateEdited": "12/1/2022",
+    "editLog": [""],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "sq",
+    "englishPronunciationsIncluded": false,
+    "emojisIncluded": false,
+    "partsOfSpeechIncluded": true,
+    "audiosIncluded": true,
+    "audioRoot": "albanian/shapes",
+    "audioSource": "https://micmonster.com/text-to-speech/albanian-albania/",
     "words": {
+        "rhombus": "romb",
+        "triangle": "trekëndësh",
+        "rectangle": "drejtkëndësh",
         "square": "katror",
-        "circle": "rreth",
-        "triangle": "trekëndëshi"
+        "heart": "zemër",
+        "oval": "vezak",
+        "hexagon": "gjashtëkëndësh",
+        "star": "yll",
+        "circle": "rreth"
     },
-    "genders": {
-        "square": true,
-        "circle": true,
-        "triangle": true
+    "partsOfSpeech": {
+        "rhombus": ["noun", "n."],
+        "triangle": ["noun", "n."],
+        "rectangle": ["noun", "n."],
+        "square": ["noun", "n."],
+        "heart": ["noun", "n."],
+        "oval": ["noun", "n."],
+        "hexagon": ["noun", "n."],
+        "star": ["noun", "n."],
+        "circle": ["noun", "n."]
+    },
+    "exampleSentences": {
+        "rhombus": null,
+        "triangle": ["Well, we have traveled within a very mysterious triangle.", "Kemi udhëtuar në një ||trekëndësh|| shumë të mistershëm."],
+        "rectangle": ["At its top is a small rectangle with paradise in the center.", "Në pjesën e saj të sipërme ka një ||drejtkëndësh|| të vogël që ka në qendër parajsën."],
+        "square": ["Energy equals mass multiplied by the square of the speed of light.", "Energjia është e barabartë me masën shumëzuar me shpejtësinë e dritës në ||katror||."],
+        "heart": ["This may hurt when it gets to your heart.", "Do të të dhëmb kur të arrijë në ||zemër||."],
+        "oval": ["This is the annex building, right next to that oval-shaped kindergarten.", "Kjo eshte ndertese perbri, afer kopeshtit vezak."],
+        "hexagon": null,
+        "star": ["I came out here to be a star, Jerry.", "Erdha këtu që të bëhem një ||yll||, Xheri."],
+        "circle": ["With us, the Earth, traveling in a circle around it.", "Bashkë me ne, Toka, lëviz në mënyrë rrethore ||rreth|| tij."]
     }
 }
