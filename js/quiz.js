@@ -56,7 +56,7 @@ $.getJSON(path, (data) => {
   $(".title").text(loadedData.title);
   $(".tabTitle").text(loadedData.title);
   $(".title").append(
-    ` <img src="${loadedData.titleIcon}" width="40px;" style="margin-top:-7px;">`
+    ` <img src="${loadedData.titleIcon}" width="48px;" style="margin-top:-7px;">`
   );
   $(".question").append(loadedData.languageName);
   $(".flagEmoji").text(loadedData.flagEmoji);

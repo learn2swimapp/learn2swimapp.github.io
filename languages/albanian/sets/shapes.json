@@ -21,6 +21,8 @@
     "emojisIncluded": false,
     "partsOfSpeechIncluded": true,
     "audiosIncluded": true,
+    "gendersIncluded": false,
+    "exampleSentencesIncluded": true,
     "audioRoot": "albanian/shapes",
     "audioSource": "https://micmonster.com/text-to-speech/albanian-albania/",
     "words": {
