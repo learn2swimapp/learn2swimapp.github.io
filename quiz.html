@@ -25,8 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- sweetalert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- Page icon -->
+    <!-- page icon -->
     <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+    <!-- page title -->
     <title class="tabTitle">Loading...</title>
   </head>
   <body>
@@ -102,6 +103,7 @@
     <div style="margin-left:2%;">
     <h3><i>Parts of Speech Key</i> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaking-head_1f5e3-fe0f.png" width="32px" style="margin-top:-5px"></h3>
     <h5><b>
+      <!-- circles key -->
       <img style="margin-top:-4px;" width="24px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-red-circle_1f534.png"> Noun
       <br>
       <img style="margin-top:-4px;" width="24px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-orange-circle_1f7e0.png"> Adjective
@@ -129,74 +131,7 @@
     <div class="moreInformation">
     <p>Set Compiler: <span class="dataCompiler"></span></p>
     </div>
-
-
-    <!-- correct answer -->
-    <div class="modal fade" id="correct">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Correct Answer ✅</h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              onclick="regenerate()"
-            ></button>
-          </div>
-
-          <!-- Modal body -->
-          <div class="modal-body">
-            Nice job! You answered correctly, hit continue to keep going.
-          </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-              onclick="regenerate()"
-            >
-              Continue
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- incorrect modal -->
-    <div class="modal fade" id="incorrect">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Incorrect Answer ❌</h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              onclick="regenerate()"
-            ></button>
-          </div>
-
-          <!-- Modal body -->
-          <div class="modal-body incorrect-text">Loading...</div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-              onclick="regenerate()"
-            >
-              Continue
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
+  <!-- import page script -->
   <script src="/js/quiz.js"></script>
 </html>
