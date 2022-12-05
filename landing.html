@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+
+<section>
+  <div id="parallax" class="parallax-item">
+    <h3 class="animate__animated animate__fadeInDown">Learn2Swim - Language Learning Made Easy<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/japanese-congratulations-button_3297-fe0f.png" width="48px;" style="margin-bottom:-12px;"></h3>
+  </div>
+  <div id="parallax2" class="parallax-item">
+    <h3>Div 2</h3>
+  </div>
+  <div class="parallax-item">
+    <h2>Div 3</h2>
+  </div>
+  <div class="parallax-item">
+    <h2>Div 4</h2>
+  </div>
+</section>
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.parallax-item h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-image: linear-gradient(#E3242B, #BC544B) 30;
+border-width: 4px;
+border-style: solid;
+}
+
+.parallax-item:first-child {
+  background: url("/assets/other-images/redwhite.jpeg");
+  background-size: cover;
+}
+
+.parallax-item:nth-child(2) {
+  background: url("/assets/other-images/darked.jpg");
+  background-size: cover;
+}
+
+.parallax-item:nth-child(3) {
+  background: url("https://images.unsplash.com/photo-1663183539627-adbe2c8ef43d?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjM5Mzk5ODc&ixlib=rb-1.2.1&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect for DIV 3 */
+  min-height: 600px;
+}
+
+.parallax-item:nth-child(4) {
+  background: #1565c0;
+}
+
+@media screen and (max-width: 768px) {
+  .parallax-item h2 {
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+<script>
+    const parallax = document.getElementById("parallax");
+    const parallax2 = document.getElementById("parallax2");
+
+// Parallax Effect for DIV 1
+window.addEventListener("scroll", function () {
+  let offset = window.pageYOffset;
+  parallax.style.backgroundPositionY = offset * 0.7 + "px";
+  parallax2.style.backgroundPositionY = offset * 1 + "px"
+  // DIV 1 background will move slower than other elements on scroll.
+});
+
+</script>
+</body>
+</html>
