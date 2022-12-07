@@ -160,13 +160,6 @@ $.getJSON(path, (data) => {
         $(".swal-button-container").click(() => {
           regenerate()
         })
-        length = Object.keys(loadedData.words).length;
-        num = Math.floor(Math.random() * length);
-        word = Object.values(loadedData.words)[num];
-        answer = Object.keys(loadedData.words)[num];
-        questionAudio = new Audio(
-          `/assets/audios/${loadedData.audioRoot}/${answer}.mp3`
-        );
         $(".tt").attr("title", answer);
         new bootstrap.Tooltip($(".tt"));
         incorrectAudio.play();
