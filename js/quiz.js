@@ -39,6 +39,7 @@ let questionAudio;
 let correct = 0;
 let incorrect = 0;
 let streak = 0;
+let completions = 0;
 //Make the GET request to the JSON file
 $.getJSON(path, (data) => {
   const loadedData = data;
@@ -49,6 +50,9 @@ $.getJSON(path, (data) => {
   questionAudio = new Audio(
     `/assets/audios/${loadedData.audioRoot}/${answer}.mp3`
   );
+  let words = Object.keys(loadedData.words)
+  console.log(words)
+
   //Edit page data
   $(".flag").attr("src", loadedData.flagPath);
   $(".tt").attr("title", answer);
@@ -62,12 +66,37 @@ $.getJSON(path, (data) => {
   $(".flagEmoji").text(loadedData.flagEmoji);
   $("html").css("--formMainColor", loadedData.formMainColor);
   $("html").css("--formSecondaryColor", loadedData.formSecondaryColor);
-
   $(".word").html(`${word}`);
+  //more set information
+  $(".dataCompiler").text(loadedData.dataCompiler)
+  $(".dataCompiler").append('<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/pencil_270f-fe0f.png" width="24px">')
+  $(".setTitle").text(loadedData.title)
+  $(".dateCreated").text(loadedData.dateCreated)
+  $(".dateCreated").append('<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/tear-off-calendar_1f4c6.png" width="24px">')
+  $(".dateEdited").text(loadedData.dateEdited)
+  $(".languageName").text(loadedData.languageName)
+  $(".source").text(loadedData.source)
+  if (loadedData.autoTranslated) {
+    $(".autoTranslated").addClass("text-success")
+    $(".autoTranslated").text(loadedData.autoTranslated.toString())
+  } else {
+    $(".autoTranslated").addClass("text-danger")
+    $(".autoTranslated").text(loadedData.autoTranslated.toString())
+  }
+  //fluent speaker verified
+  if (loadedData.fluentSpeakerVerified) {
+    $(".fluentSpeakerVerified").addClass("text-success")
+    $(".fluentSpeakerVerified").text(loadedData.fluentSpeakerVerified.toString())
+  } else {
+    $(".fluentSpeakerVerified").addClass("text-danger")
+    $(".fluentSpeakerVerified").text(loadedData.fluentSpeakerVerified.toString())
+  }
+
 
   $(".form__field").keypress((e) => {
     const key = e.which;
     if (key == 13) {
+      //ANSWER CORRECT
       if ($(".form__field").val() === answer) {
         streak++;
         correct++;
@@ -77,33 +106,47 @@ $.getJSON(path, (data) => {
           closeOnEsc: true,
           closeOnClickOutside: true,
           className: "correct-modal",
+          iconHtml: '<img src="https://picsum.photos/100/100">',
           buttons: {
             confirm: "Continue"
           }
         })
+        $(".correct-modal swal-icon").html("0")
         $(".correct-modal button").on('mouseenter', function() {$(this).css('background', '#2E8B57')})
         $(".correct-modal button").on('mouseleave', function() {$(this).css('background', '#50C878')})
         $(".swal-button-container").click(() => {
           regenerate()
         })
-        length = Object.keys(loadedData.words).length;
+        console.log(words.length)
+        index = words.indexOf(answer)
+        words.splice(index, 1);
+        if (words.length === 0) {
+          completions++
+          $(".completions").text(completions)
+          words = Object.keys(loadedData.words)
+        }
+        console.log(words)
+        length = words.length;
         num = Math.floor(Math.random() * length);
-        word = Object.values(loadedData.words)[num];
-        answer = Object.keys(loadedData.words)[num];
+        answer = words[num];
+        word = loadedData.words[answer]
+        console.log(word)
+        console.log(answer)
+        //Object.keys(loadedData.words)[num];
         questionAudio = new Audio(
           `/assets/audios/${loadedData.audioRoot}/${answer}.mp3`
         );
         $(".tt").attr("title", answer);
         new bootstrap.Tooltip($(".tt"));
         correctAudio.play();
-      } else {
+      } 
+
+      //ANSWER INCORRECT
+      else {
         streak = 0;
         incorrect++;
         $(".streak").text(streak);
         $(".incorrect").text(incorrect);
-        $(".incorrect-text").html(
-          `You answered incorrectly. The correct answer was <span style="text-decoration:underline;">${answer}</span>`
-        );
         swal("You answered incorrectly", `The correct answer was ${answer}, hit continue to keep going or press Enter/Escape`, "error", {
           closeOnEsc: true,
           closeOnClickOutside: true,
@@ -126,7 +169,6 @@ $.getJSON(path, (data) => {
         );
         $(".tt").attr("title", answer);
         new bootstrap.Tooltip($(".tt"));
-        //$("#incorrect").modal("show");
         incorrectAudio.play();
       }
     }

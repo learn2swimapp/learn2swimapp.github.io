@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- sweetalert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- social buttons generator, https://www.aakashweb.com/apps/social-buttons-generator/ -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/css/socializer.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <!-- page icon -->
     <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
     <!-- page title -->
@@ -74,7 +77,7 @@
       <span class="streak text-warning">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/fire_1f525.png" width="30px" style="margin-top:-7px"> 
       <span class="correct text-success">0</span>  <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Check%20mark%20button/3D/check_mark_button_3d.png" width="30px" style="margin-top:-7px">
       <span class="incorrect text-danger">0</span> <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cross%20mark/3D/cross_mark_3d.png" width="30px" style="margin-top:-7px">
-      <span class="time">00:00</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/twelve-oclock_1f55b.png" width="30px" style="margin-top:-7px">
+      <span class="completions" style="color:#fff200">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/glowing-star_1f31f.png" width="32px" style="margin-top:-7px">
     </h3>
     <!-- HTML to write -->
     <!---->
@@ -99,7 +102,7 @@
       </div>
     </div>
     <hr class="divider" />
-    <h2 style="text-align: center">Flashcards <img style="margin-top:-4px" width="32px" src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Ledger/3D/ledger_3d.png"></h2><br>
+    <h2 style="text-align: center">Flashcards <img style="margin-top:-4px" width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/spiral-notepad_1f5d2-fe0f.png"></h2><br>
     <div style="margin-left:2%;">
     <h3><i>Parts of Speech Key</i> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaking-head_1f5e3-fe0f.png" width="32px" style="margin-top:-5px"></h3>
     <h5><b>
@@ -127,10 +130,26 @@
     <p id="hidden"></p>
     <hr>
     <!-- more set information -->
-    <h2 style="text-align: center;">More Set Information</h2>
+    <h2 style="text-align: center;">More Set Information <img style="margin-top:-4px" width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/card-index-dividers_1f5c2-fe0f.png"></h2>
     <div class="moreInformation">
     <p>Set Compiler: <span class="dataCompiler"></span></p>
+    <p>Set Title: <span class="setTitle"></span></p>
+    <p>Date Created: <span class="dateCreated"></span></p>
+    <p>Date Last Edited: <span class="dateEdited"></span></p>
+    <p>Language: <span class="languageName"></span></p>
+    <p>Data Source: <span class="source"></span></p>
+    <p>Auto Translated: <span class="autoTranslated"></span></p>
+    <p>Verified by Fluent Speaker: <span class="fluentSpeakerVerified"></span></p>
     </div>
+    <div style="text-align:center;">
+    <div class="socializer" data-features="32px,opacity,icon-white,pad" data-sites="email,discord,tiktok,twitter,twitch" data-meta-link="" data-meta-title="" data-meta-email="learn2swimapp@gmail.com" data-meta-discord="https://discord.gg/5ZsYjjMxyZ" data-meta-twitter="https://twitter.com/learn2swim_app"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/js/socializer.min.js"></script>
+<script>
+(function(){
+    socializer( '.socializer' );
+}());
+</script>
   </body>
   <!-- import page script -->
   <script src="/js/quiz.js"></script>
