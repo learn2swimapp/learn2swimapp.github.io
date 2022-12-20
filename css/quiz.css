@@ -140,10 +140,13 @@
     background-color: #50C878
   }
   .moreInformation {
+    vertical-align:top;
     display:inline-block;
     width:30%;
-    padding-left:15px;
+    padding: 15px;
+    padding-left:25px;
     box-shadow: inset 3px -3px 10px 0 rgba(0, 0, 0, 0.3), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 45px;
   }
   .cards {
     width:50%;
