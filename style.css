@@ -53,8 +53,10 @@ button:active {
 }
 
 body {
-    background: #f9f8fd;
+    /*background: #f9f8fd;*/
+    background-image: url("/assets/other-images/background-white.webp");
 }
+math quiz
 /*
 nav {
 

@@ -34,7 +34,10 @@
         "oval": "vezak",
         "hexagon": "gjashtëkëndësh",
         "star": "yll",
-        "circle": "rreth"
+        "circle": "rreth",
+        "ellipse": "elips",
+        "pentagon": "pesëkëndësh",
+        "octagon": "tetëkëndësh"
     },
     "partsOfSpeech": {
         "rhombus": ["noun", "n."],
@@ -45,7 +48,10 @@
         "oval": ["noun", "n."],
         "hexagon": ["noun", "n."],
         "star": ["noun", "n."],
-        "circle": ["noun", "n."]
+        "circle": ["noun", "n."],
+        "ellipse": ["noun", "n."],
+        "pentagon": ["noun", "n."],
+        "octagon": ["noun", "n."]
     },
     "exampleSentences": {
         "rhombus": null,

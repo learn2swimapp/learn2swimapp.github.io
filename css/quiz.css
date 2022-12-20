@@ -1,5 +1,5 @@
 .card {
-    width: 50%;
+  width:85%;
     margin-left: 5%;
     margin-bottom: 3%;
   }
@@ -140,5 +140,12 @@
     background-color: #50C878
   }
   .moreInformation {
-    margin-left: 2%;
+    display:inline-block;
+    width:30%;
+    padding-left:15px;
+    box-shadow: inset 3px -3px 10px 0 rgba(0, 0, 0, 0.3), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  }
+  .cards {
+    width:50%;
+    display: inline-block;
   }

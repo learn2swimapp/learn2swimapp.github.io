@@ -69,10 +69,8 @@ $.getJSON(path, (data) => {
   $(".word").html(`${word}`);
   //more set information
   $(".dataCompiler").text(loadedData.dataCompiler)
-  $(".dataCompiler").append('<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/pencil_270f-fe0f.png" width="24px">')
   $(".setTitle").text(loadedData.title)
   $(".dateCreated").text(loadedData.dateCreated)
-  $(".dateCreated").append('<img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/tear-off-calendar_1f4c6.png" width="24px">')
   $(".dateEdited").text(loadedData.dateEdited)
   $(".languageName").text(loadedData.languageName)
   $(".source").text(loadedData.source)
@@ -106,7 +104,6 @@ $.getJSON(path, (data) => {
           closeOnEsc: true,
           closeOnClickOutside: true,
           className: "correct-modal",
-          iconHtml: '<img src="https://picsum.photos/100/100">',
           buttons: {
             confirm: "Continue"
           }
