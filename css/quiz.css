@@ -26,7 +26,8 @@
   .title {
     text-align: center;
     margin-top: 2%;
-    font-family: KeeponTruckin
+    font-family: Poppins;
+    font-weight: bold;
   }
   .question-div {
     margin: auto;
@@ -165,7 +166,6 @@ backdrop-filter: blur(5px);
   }
 
   body {
-    background-image: url("/assets/other-images/checkered.jpg")
   }
 
   html {
