@@ -1,0 +1,33 @@
+html {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.homebutton {
+  text-decoration: none;
+  position: relative;
+  background-color: #eabc05;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #eabc05;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-left: 1px solid #eabc05;
+  border-radius: 5px;
+  top: 0;
+  transition: top ease 0.15s;
+  font-size: 40px;
+}
+
+.homebutton:hover {
+  top: -0.3rem;
+}
+
+.homebutton:active {
+  top: 0.1rem;
+  border-top: 1px solid #eacc05;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #eacc05;
+}
