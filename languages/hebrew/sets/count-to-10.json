@@ -1,8 +1,8 @@
 {
-    "title": "Count to 10 in Greek",
+    "title": "Count to 10 in Hebrew",
     "titleIcon": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Abacus/3D/abacus_3d.png",
     "flagEmoji": "🇮🇱",
-    "flagPath": "/assets/flags/greece.png",
+    "flagPath": "/assets/flags/israel.png",
     "languageName": "Hebrew",
     "formMainColor": "#005EB8",
     "formSecondaryColor": "#FFFFFF",

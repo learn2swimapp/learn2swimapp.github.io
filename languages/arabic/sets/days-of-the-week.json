@@ -1,0 +1,47 @@
+{
+    "title": "Days of the Week in Arabic",
+    "titleIcon": "/assets/icons/calendar.png",
+    "flagEmoji": "🇸🇦",
+    "flagPath": "/assets/flags/saudi-arabia.png",
+    "languageName": "Arabic",
+    "formMainColor": "#059033",
+    "formSecondaryColor": "#FBFCF8",
+    "autoTranslated": true,
+    "sources": ["https://nat.dev"],
+    "dataCompiler": "Steven Alexander Livingston",
+    "dataEditors": ["Steven Alexander Livingston"],
+    "dateCreated": "2/26/2023",
+    "dateEdited": "2/26/2023",
+    "editLog": [],
+    "fluentSpeaker": false,
+    "fluentSpeakerVerified": false,
+    "baseLanguage": "en",
+    "targetLanguage": "ar",
+    "englishPronunciationsIncluded": false,
+    "emojisIncluded": false,
+    "partsOfSpeechIncluded": true,
+    "audiosIncluded": true,
+    "audioRoot": "arabic/days-of-the-week",
+    "audioSource": "https://micmonster.com/text-to-speech/arabic-united-arab-emirates/",
+    "words": {
+      "sunday": "الأحد",
+      "monday": "الاثنين",
+      "tuesday": "الثلاثاء",
+      "wednesday": "الأربعاء",
+      "thursday": "الخميس",
+      "friday": "الجمعة",
+      "saturday": "السبت"
+    },
+    "partsOfSpeech": {
+      "sunday": ["noun", "n."],
+      "monday": ["noun", "n."],
+      "tuesday": ["noun", "n."],
+      "wednesday": ["noun", "n."],
+      "thursday": ["noun", "n."],
+      "friday": ["noun", "n."],
+      "saturday": ["noun", "n."]
+    },
+    "emojis": {},
+    "videoSources": []
+}
+  
