@@ -59,9 +59,11 @@ $.getJSON(path, (data) => {
   new bootstrap.Tooltip($(".tt"));
   $(".title").text(loadedData.title);
   $(".tabTitle").text(loadedData.title);
+  /*
   $(".title").append(
     ` <img src="${loadedData.titleIcon}" width="48px;" style="margin-top:-7px;">`
   );
+  */
   $(".question").append(loadedData.languageName);
   $(".flagEmoji").text(loadedData.flagEmoji);
   $("html").css("--formMainColor", loadedData.formMainColor);

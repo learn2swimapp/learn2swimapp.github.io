@@ -3,6 +3,14 @@
   src: url("/assets/fonts/KeeponTruckin.ttf");
 }
 
+@font-face {
+  font-family: BabyDoll;
+  src: url("/assets/fonts/BabyDoll.ttf");
+}
+body {
+  font-family: BabyDoll;
+}
+
 .card {
   width:85%;
     margin-left: 5%;
@@ -26,7 +34,14 @@
   .title {
     text-align: center;
     margin-top: 2%;
-    font-family: KeeponTruckin
+    font-family: KeeponTruckin;
+    color:white;
+    text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000,
+                        -3px 3px 0 var(--formMainColor),
+                        -6px 6px 0 var(--formSecondaryColor);
   }
   .question-div {
     margin: auto;
@@ -136,13 +151,23 @@ backdrop-filter: blur(5px);
   }
   nav {
     border-radius: 0px 0px 20px 20px;
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   img.emoji {
     width: 28px;
   }
   .current-stats {
-    margin-top: 1%;
-    margin-left: 1%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background: rgba(255, 255, 255, 0.5);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
   }
   .incorrect-modal button {
     background-color: #BF0A30
@@ -153,11 +178,18 @@ backdrop-filter: blur(5px);
   .moreInformation {
     vertical-align:top;
     display:inline-block;
-    width:30%;
+    width:40%;
     padding: 15px;
     padding-left:25px;
+    background: rgba(255, 255, 255, 0.22);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
     box-shadow: inset 3px -3px 10px 0 rgba(0, 0, 0, 0.3), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
     border-radius: 45px;
+    float: right;
+    margin-right: 3%;
   }
   .cards {
     width:50%;
@@ -165,7 +197,7 @@ backdrop-filter: blur(5px);
   }
 
   body {
-    background-image: url("/assets/other-images/checkered.jpg")
+    background-image: url("/assets/other-images/checker.webp")
   }
 
   html {
