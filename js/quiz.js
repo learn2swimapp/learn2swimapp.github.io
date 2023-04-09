@@ -64,7 +64,7 @@ $.getJSON(path, (data) => {
     ` <img src="${loadedData.titleIcon}" width="48px;" style="margin-top:-7px;">`
   );
   */
-  $(".question").append(loadedData.languageName);
+  $(".question").append(`<b>${loadedData.languageName}</b>`);
   $(".flagEmoji").text(loadedData.flagEmoji);
   $("html").css("--formMainColor", loadedData.formMainColor);
   $("html").css("--formSecondaryColor", loadedData.formSecondaryColor);
@@ -75,7 +75,7 @@ $.getJSON(path, (data) => {
   $(".dateCreated").text(loadedData.dateCreated)
   $(".dateEdited").text(loadedData.dateEdited)
   $(".languageName").text(loadedData.languageName)
-  $(".source").text(loadedData.source)
+  $(".source").text(loadedData.sources.join(", "))
   if (loadedData.autoTranslated) {
     $(".autoTranslated").addClass("text-success")
     $(".autoTranslated").text(loadedData.autoTranslated.toString())
@@ -168,31 +168,31 @@ $.getJSON(path, (data) => {
   function loadPartOfSpeechEmoji(partOfSpeech) {
     switch (partOfSpeech) {
       case "noun":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-red-circle_1f534.png";
+        return "/assets/icons/red-circle.png";
         break;
       case "adjective":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-orange-circle_1f7e0.png";
+        return "/assets/icons/orange-circle.png";
         break;
       case "verb":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-yellow-circle_1f7e1.png";
+        return "/assets/icons/yellow-circle.png";
         break;
       case "adverb":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-green-circle_1f7e2.png";
+        return "/assets/icons/green-circle.png";
         break;
       case "pronoun":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-blue-circle_1f535.png";
+        return "/assets/icons/blue-circle.png";
         break;
       case "number":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-purple-circle_1f7e3.png";
+        return "/assets/icons/purple-circle.png";
         break;
       case "article":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/large-brown-circle_1f7e4.png";
+        return "/assets/icons/brown-circle.png";
         break;
       case "preposition":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/black-circle_26ab.png";
+        return "/assets/icons/black-circle.png";
         break;
       case "conjunction":
-        return "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/white-circle_26aa.png";
+        return "/assets/icons/white-circle.png";
         break;
     }
   }
@@ -206,7 +206,7 @@ $.getJSON(path, (data) => {
           loadedData.partsOfSpeech[pair[0]][0]
         )}" width="24px" style="margin-top:-4px"></div><div class="card-body">${
           pair[1]
-        } <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaker-high-volume_1f50a.png" width="24px" onclick="playAudio('/assets/audios/${
+        } <img src="/assets/icons/audio.png" width="24px" onclick="playAudio('/assets/audios/${
           loadedData.audioRoot
         }/${pair[0]}.mp3')"></div></div>`
       );

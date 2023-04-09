@@ -8,7 +8,7 @@
   src: url("/assets/fonts/BabyDoll.ttf");
 }
 body {
-  font-family: BabyDoll;
+  font-family: Poppins;
 }
 
 .card {
@@ -34,7 +34,6 @@ body {
   .title {
     text-align: center;
     margin-top: 2%;
-    font-family: Poppins;
     font-weight: bold;
   }
   .question-div {
@@ -144,24 +143,22 @@ backdrop-filter: blur(5px);
     box-shadow: none;
   }
   nav {
+    /*
     border-radius: 0px 0px 20px 20px;
     background: rgba(255, 255, 255, 0.22);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    */
+    border-bottom: 1.5px solid grey;
+    border-radius: 7.5px;
+    margin-bottom: 15px;
   }
   img.emoji {
     width: 28px;
   }
   .current-stats {
-    position:absolute;
-    bottom:0;
-    right:0;
-    background: rgba(255, 255, 255, 0.5);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+    margin-left: 10px;
   }
   .incorrect-modal button {
     background-color: #BF0A30
@@ -189,10 +186,6 @@ backdrop-filter: blur(5px);
     width:50%;
     display: inline-block;
   }
-
-  body {
-  }
-
   html {
     scroll-behavior:smooth;
   }

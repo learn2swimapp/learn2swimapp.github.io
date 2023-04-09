@@ -45,36 +45,44 @@
           <li class="nav-item">
             <a class="nav-link" href="/">
               Home 
-              <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/House%20with%20garden/3D/house_with_garden_3d.png" width="24px" style="margin-top:-5px;">
+              <img src="/assets/icons/house.png" width="24px" style="margin-top:-5px;">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/about">
               About 
-              <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/bust-in-silhouette_1f464.png" width="24px" style="margin-top:-5px;">
+              <img src="/assets/icons/silhouette.png" width="24px" style="margin-top:-5px;">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/languages">
-              Languages <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese%20congratulations%20button/3D/japanese_congratulations_button_3d.png" width="24px" style="margin-top:-5px;">
+              Languages <img src="/assets/icons/japanese-congratulations.png" width="24px" style="margin-top:-5px;">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/socials">
               Socials 
-              <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mobile%20phone/3D/mobile_phone_3d.png" width="24px;" style="margin-top:-5px;">
+              <img src="/assets/icons/mobile-phone.png" width="24px;" style="margin-top:-5px;">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/donate">
               Donate 
-              <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dollar%20banknote/3D/dollar_banknote_3d.png" width="24px" style="margin-top:-5px">
+              <img src="/assets/icons/money.png" width="24px" style="margin-top:-5px">
             </a>
           </li>
         </ul>
       </div>
     </nav>
     <!--streak correct and incorrect status bar-->
+    <!--question stats-->
+      <!--CLASS:current-stats-->
+      <h3 class="current-stats">
+        <span class="streak text-warning">0</span> <img src="/assets/icons/fire.png" width="30px" style="margin-top:-7px"> 
+        <span class="correct text-success">0</span>  <img src="/assets/icons/check-mark.png" width="30px" style="margin-top:-7px">
+        <span class="incorrect text-danger">0</span> <img src="/assets/icons/cross-mark.png" width="30px" style="margin-top:-7px">
+        <span class="completions" style="color:#fff200">0</span> <img src="/assets/icons/glowing-star.png" width="32px" style="margin-top:-7px">
+      </h3>
     <!-- HTML to write -->
     <!---->
     <h1 class="title animate__animated animate__backInLeft">
@@ -90,21 +98,15 @@
         <span class="tt" data-toggle="tooltip" data-bs-placement="top" title="idk">
         <span class="word">Loading...</span>
         </span>
-        <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaker-high-volume_1f50a.png" width="30px" onclick="questionAudio.play()"></img>
+        <img src="/assets/icons/audio.png" width="30px" onclick="questionAudio.play()"></img>
       </h4>
       <div class="form__group field">
         <input class="form__field" name="name" id="name" autofocus autocomplete="off" />
         <label for="main" class="form__label">Your Answer Below</label>
       </div>
-      <h3 class="current-stats">
-        <span class="streak text-warning">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/fire_1f525.png" width="30px" style="margin-top:-7px"> 
-        <span class="correct text-success">0</span>  <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Check%20mark%20button/3D/check_mark_button_3d.png" width="30px" style="margin-top:-7px">
-        <span class="incorrect text-danger">0</span> <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cross%20mark/3D/cross_mark_3d.png" width="30px" style="margin-top:-7px">
-        <span class="completions" style="color:#fff200">0</span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/glowing-star_1f31f.png" width="32px" style="margin-top:-7px">
-      </h3>
     </div>
     <hr class="divider" />
-    <h2 style="text-align: center">Flashcards <img style="margin-top:-4px" width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/spiral-notepad_1f5d2-fe0f.png"></h2><br>
+    <h2 style="text-align: center">Flashcards <img style="margin-top:-4px" width="32px" src="/assets/icons/folders.png"></h2><br>
     <div style="margin-left:2%;">
    <!-- <h3><i>Parts of Speech Key</i> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/speaking-head_1f5e3-fe0f.png" width="32px" style="margin-top:-5px"></h3>
     <h5><b>
@@ -135,14 +137,14 @@
     <!-- more set information -->
     <!--<h2 style="text-align: center;">More Set Information <img style="margin-top:-4px" width="32px" src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/card-index-dividers_1f5c2-fe0f.png"></h2>-->
     <div class="moreInformation">
-    <p>Set Compiler: <span class="dataCompiler"></span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/pencil_270f-fe0f.png" width="24px" style="margin-top:-3px;"></p>
-    <p>Set Title: <span class="setTitle"></span></p>
-    <p>Date Created: <span class="dateCreated"></span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/tear-off-calendar_1f4c6.png" width="24px" style="margin-top:-3px;"></p>
-    <p>Date Last Edited: <span class="dateEdited"></span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/calendar_1f4c5.png" width="24px" style="margin-top:-3px;"></p>
-    <p>Language: <span class="languageName"></span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/japanese-reserved-button_1f22f.png" width="24px" style="margin-top:-3px;"></p>
-    <p>Data Source: <span class="source"></span> <img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/floppy-disk_1f4be.png" width="24px" style="margin-top:-3px;"></p>
-    <p>Auto Translated: <span class="autoTranslated"></span></p>
-    <p>Verified by Fluent Speaker: <span class="fluentSpeakerVerified"></span></p>
+    <p><b>Set Compiler:</b> <span class="dataCompiler"></span> <img src="/assets/icons/pencil.png" width="24px" style="margin-top:-3px;"></p>
+    <p><b>Set Title:</b> <span class="setTitle"></span></p>
+    <p><b>Date Created:</b> <span class="dateCreated"></span> <img src="/assets/icons/calendar.png" width="24px" style="margin-top:-3px;"></p>
+    <p><b>Date Last Edited:</b> <span class="dateEdited"></span> <img src="/assets/icons/calendar-animated.png" width="24px" style="margin-top:-3px;"></p>
+    <p><b>Language:</b> <span class="languageName"></span> <img src="/assets/icons/japanese-reserved.png" width="24px" style="margin-top:-3px;"></p>
+    <p><b>Data Source:</b> <span class="source"></span> <img src="/assets/icons/floppy-disk.png" width="24px" style="margin-top:-3px;"></p>
+    <p><b>Auto Translated:</b> <span class="autoTranslated"></span></p>
+    <p><b>Verified by Fluent Speaker:</b> <span class="fluentSpeakerVerified"></span></p>
     </div>
     <div style="text-align:center;">
     <div class="socializer" data-features="32px,opacity,icon-white,pad" data-sites="email,discord,tiktok,twitter,twitch" data-meta-link="" data-meta-title="" data-meta-email="learn2swimapp@gmail.com" data-meta-discord="https://discord.gg/5ZsYjjMxyZ" data-meta-twitter="https://twitter.com/learn2swim_app"></div>
