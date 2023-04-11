@@ -24,7 +24,7 @@
 <body>
     <!-- title -->
     <div class="title">
-        <h1 class="title-text"><b><span style="color:#E03C31">Af</span><span style="color:#001489">ri</span><span style="color:#007749">ka</span><span style="color:#FFB81C">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span></h1>
+        <h1 class="title-text"><b><span style="color:#E03C31">Af</span><span style="color:#001489">ri</span><span style="color:#007749">ka</span><span style="color:#FFB81C">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;" class="fa fa-moon-o"></i></h1>
     </div>
     <!-- main content -->
     <div class="main">
@@ -71,7 +71,7 @@
     <!-- footer -->
     
     <div class="footer">
-        <p><img src="/assets/icon.png" width="16px"> Learn2Swim 2023 <b>|</b> View home page <a href="/" class="text-info">here</a></p>
+        <p><img src="/assets/icon.png" class="emoji" width="16px"> Learn2Swim 2023 <b>|</b> View home page <a href="/" class="text-info">here</a></p>
     </div>
 
 </body>
@@ -412,7 +412,7 @@
 </style>
 <script>
     //incomplete page warning toast
-    toastr.warning('Some features are not available, email therealenny1@gmail.com for questions', 'Page under construction')
+    //toastr.warning('Some features are not available, email therealenny1@gmail.com for questions', 'Page under construction')
     function play(file) {
         let audio = new Audio(file);
         audio.volume = 1
@@ -462,5 +462,26 @@
     */
     const sources = ["https://en.wikipedia.org/wiki/Albanian_language", "https://adventurousmiriam.com/albanian-phrases-english-to-albanian/"]
     twemoji.parse(document.body, { folder: "svg", ext: ".svg" });
+    //retrieve the default color scheme that the user has stored and if they havent stored one, just set it
+    if(!localStorage.getItem("theme")){
+      localStorage.setItem("theme", "light")
+    }
+    if (localStorage.getItem("theme") === "light") {
+      light()
+    } else {
+      dark()
+    }
+    function dark() {
+      $("a").removeClass("text-info")
+      $("a").css("color", "white")
+      $("body").css("background-color", "#4C566A");
+      $("body").css("color", "white")
+      $(".title").css("background-color","#3B4252")
+      $("span").css("color", "white")
+      $(".button-front").css("background", "#F72119")
+      $(".button-front-2").css("background", "#4D4DFF")
+      $(".button-front-3").css("background", "#31D618")
+      $(".button-front-4").css("background", "#C9CF1F")
+    }
 </script>
 </html>
