@@ -16,26 +16,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- twemoji -->
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/assets/flags/albania.png" type="image/x-icon">
-    <title>Albanian Info</title>
+    <!-- Poppins font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" href="/assets/flags/saudi-arabia.png" type="image/x-icon">
+    <title>Arabic Home Page</title>
 </head>
 <body>
     <!-- title -->
     <div class="title">
-        <h1 class="title-text"><b><span style="color:#000000">Alba</span><span style="color:#da291c">nian</span></b> Language Home Page 🇦🇱<span class="version">v0.0.1</span></h1>
+        <h1 class="title-text"><b><span style="color:#165d31">Arabic</span></b> Language Home Page 🇸🇦<span class="version">v0.0.1</span></h1>
     </div>
     <!-- main content -->
     <div class="main">
     <div class="content">
       <!-- HTML !-->
       <h2>Quizzes</h2>
+      <!-- count to 10 quiz -->
 <button class="button-pushable" role="button" onclick="window.location.replace('/quiz.html?/languages/albanian/sets/count-to-10.json')">
   <span class="button-shadow"></span>
   <span class="button-edge"></span>
   <span class="button-front text">
-    Count to 10 Quiz <img src="/assets/icons/abacus.png" class="icon-emoji">
+    Count to 10 Quiz <i class="fa fa-plus"></i>
   </span>
 </button>
+<br><br>
+<!-- days of the week quiz -->
+<button class="button-pushable" role="button" onclick="window.location.replace('/quiz.html?/languages/arabic/sets/days-of-the-week.json')">
+    <span class="button-shadow"></span>
+    <span class="button-edge"></span>
+    <span class="button-front text">
+      Days of the Week Quiz <i class="fa fa-calendar"></i>
+    </span>
+  </button>
     </div><!-- stats -->
     </div>
     <!-- footer -->
@@ -46,6 +58,9 @@
 
 </body>
 <style>
+    body {
+        font-family: Poppins;
+    }
   .icon-emoji {
     height: 1.4em;
     width: 1.4em;
@@ -92,7 +107,7 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  background-color: #991d14;
+  background-color: #165d31;
 }
 
 .button-front {
@@ -102,7 +117,7 @@
   border-radius: 12px;
   font-size: 1.1rem;
   color: white;
-  background: #da291c;
+  background: #1e7d42;
   will-change: transform;
   transform: translateY(-4px);
   transition:
