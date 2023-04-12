@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jquery colors plugin -->
+    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
     <!-- toastr.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -23,10 +25,10 @@
     <link rel="icon" href="/assets/flags/south-africa.png" type="image/x-icon">
     <title>Afrikaans Home Page</title>
 </head>
-<body>
+<body class="body">
     <!-- title -->
     <div class="title">
-        <h1 class="title-text"><b><span style="color:#E03C31">Af</span><span style="color:#001489">ri</span><span style="color:#007749">ka</span><span style="color:#FFB81C">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;cursor:grab;" class="fa fa-sun-o theme-icon" onclick="switchTheme()"></i></h1>
+        <h1 class="title-text"><b><span style="color:#E03C31" class="red-title">Af</span><span style="color:#001489" class="blue-title">ri</span><span style="color:#007749" class="green-title">ka</span><span style="color:#FFB81C" class="yellow-title">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;cursor:grab;" class="fa fa-sun-o theme-icon" onclick="switchTheme()"></i></h1>
     </div>
     <!-- main content -->
     <div class="main">
@@ -414,6 +416,29 @@
     .white-text {
       color: white !important;
     }
+    /* transition animations */
+    @keyframes light-to-dark-background {
+      from {background-color: #FFFFFF;}
+      to {background-color: #4C566A;}
+    }
+    @keyframes dark-to-light-background {
+      from {background-color: #4C566A;}
+      to {background-color: #FFFFFF;}
+    }
+    @keyframes dark-to-light-navbar {
+      from {background-color: #3B4252;}
+      to {background-color: #EEEEEE;}
+    }
+    @keyframes light-to-dark-navbar {
+      from {background-color: #EEEEEE;}
+      to {background-color: #3B4252;}
+    }
+    @keyframes light-to-dark-color {
+      to {color: white;}
+    }
+    @keyframes dark-to-light-color {
+      to {color: black;}
+    }
 </style>
 <script>
     //incomplete page warning toast
@@ -433,36 +458,52 @@
     }
     console.log(currentTheme)
     function dark() {
+      /*
       $("body").hide()
       $("body").fadeIn(2000)
+      */
       $(".theme-icon").removeClass("fa-sun-o")
       $(".theme-icon").addClass("fa-moon-o")
+      //$("a").removeClass("text-info")
+      //$("a").css("color", "white")
+      //change background animation and change text color animation
+      //$("body").addClass("body")
+      //$(".body").css("animation", "light-to-dark-background 1000ms linear, light-to-dark-color 1000ms linear");
+      //$("body").removeClass("body")
+      $("body").animate({backgroundColor: '#4C566A'})
+      $("body").animate({color: '#FFFFFF'})
+      $(".title").animate({backgroundColor: "#3B4252"})
+      $("span").animate({color: "white"})
       $("a").removeClass("text-info")
-      $("a").css("color", "white")
-      $("body").css("background-color", "#4C566A")
-      $("body").css("color", "white")
-      $(".title").css("background-color","#3B4252")
-      $("span").addClass("white-text")
-      $(".button-front").css("background", "#F72119")
-      $(".button-front-2").css("background", "#4D4DFF")
-      $(".button-front-3").css("background", "#31D618")
-      $(".button-front-4").css("background", "#C9CF1F")
+      $("a").animate({color: "white"})
+      $(".button-front").animate({backgroundColor: '#F72119'})
+      $(".button-front-2").animate({backgroundColor: '#4D4DFF'})
+      $(".button-front-3").animate({backgroundColor: '#31D618'})
+      $(".button-front-4").animate({backgroundColor: '#C9CF1F'})
+      //$("body").css("color", "white")
+      //$(".title").css("background-color","#3B4252")
       currentTheme = "dark"
     }
     function light() {
+      /*
       $("body").hide()
       $("body").fadeIn(2000)
+      */
       $(".theme-icon").removeClass("fa-moon-o")
       $(".theme-icon").addClass("fa-sun-o")
-      $("a").addClass("text-info")
-      $("body").css("background-color", "#FFFFFF")
-      $("body").css("color", "black")
-      $(".title").css("background-color","#EEEEEE")
-      $("span").removeClass("white-text")
-      $(".button-front").css("background", "#E03C31")
-      $(".button-front-2").css("background", "#001489")
-      $(".button-front-3").css("background", "#007749")
-      $(".button-front-4").css("background", "#FFB81C")
+      $("body").animate({backgroundColor: "#FFFFFF"})
+      $("body").animate({color: "black"})
+      $(".title").animate({backgroundColor: "#EEEEEE"})
+      //fix spans
+      $(".red-title").animate({color: "#E03C31"})
+      $(".blue-title").animate({color: "#001489"})
+      $(".green-title").animate({color: "#007749"})
+      $(".yellow-title").animate({color: "#FFB81C"})
+      $(".button-front").animate({backgroundColor: '#E03C31'})
+      $(".button-front-2").animate({backgroundColor: '#001489'})
+      $(".button-front-3").animate({backgroundColor: '#007749'})
+      $(".button-front-4").animate({backgroundColor: '#FFB81C'})
+      $(".version").animate({color: "#9897a9"})
       currentTheme = "light"
     }
     function switchTheme() {
