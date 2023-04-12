@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- twemoji -->
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <!-- bootbox for user prompts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js" integrity="sha512-kwtW9vT4XIHyDa+WPb1m64Gpe1jCeLQLorYW1tzT5OL2l/5Q7N0hBib/UNH+HFVjWgGzEIfLJt0d8sZTNZYY6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Poppins font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="icon" href="/assets/flags/south-africa.png" type="image/x-icon">
@@ -24,7 +26,7 @@
 <body>
     <!-- title -->
     <div class="title">
-        <h1 class="title-text"><b><span style="color:#E03C31">Af</span><span style="color:#001489">ri</span><span style="color:#007749">ka</span><span style="color:#FFB81C">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;" class="fa fa-moon-o"></i></h1>
+        <h1 class="title-text"><b><span style="color:#E03C31">Af</span><span style="color:#001489">ri</span><span style="color:#007749">ka</span><span style="color:#FFB81C">an</span>s</b> Language Home Page 🇿🇦<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;cursor:grab;" class="fa fa-sun-o theme-icon" onclick="switchTheme()"></i></h1>
     </div>
     <!-- main content -->
     <div class="main">
@@ -409,79 +411,66 @@
     .title {
         padding: 2.5%;
     }
+    .white-text {
+      color: white !important;
+    }
 </style>
 <script>
     //incomplete page warning toast
     //toastr.warning('Some features are not available, email therealenny1@gmail.com for questions', 'Page under construction')
-    function play(file) {
-        let audio = new Audio(file);
-        audio.volume = 1
-        audio.play();
-    }
-    $(document).ready(() => {
-        const statsWidth = $(".stats").css('width');
-        console.log(statsWidth)
-        $('.version').hide()
-        $('.title-text').mouseenter(() => {
-            $('.version').fadeIn(500)
-        })
-        $('.title-text').mouseleave(() => {
-            $('.version').fadeOut(500)
-        })
-    })
-
-    let balkanNativeSpeakers = 0;
-    let globalNativeSpeakers = 0;
-
-    setInterval(() => {
-        $('.balkanNativeSpeakers').text(balkanNativeSpeakers)
-        if (balkanNativeSpeakers > 6000000) {
-            $('.balkanNativeSpeakers').text('6000000+')
-            clearInterval()
-        } else {
-            balkanNativeSpeakers += 12345
-        }
-    }, 1)
-
-    setInterval(() => {
-        $('.globalNativeSpeakers').text(globalNativeSpeakers)
-        if (globalNativeSpeakers > 7500000) {
-            $('.globalNativeSpeakers').text('7500000+')
-            clearInterval()
-        } else {
-            globalNativeSpeakers += 12345
-        }
-    }, 1)
-
-    //audio for albanian phrases
-    /*
-    $('.hello-audio').click(() => {
-        let audio = new Audio('/assets/audios/albanian/hello.mp3')
-        audio.play()
-    })
-    */
-    const sources = ["https://en.wikipedia.org/wiki/Albanian_language", "https://adventurousmiriam.com/albanian-phrases-english-to-albanian/"]
     twemoji.parse(document.body, { folder: "svg", ext: ".svg" });
     //retrieve the default color scheme that the user has stored and if they havent stored one, just set it
+    let currentTheme;
     if(!localStorage.getItem("theme")){
       localStorage.setItem("theme", "light")
     }
     if (localStorage.getItem("theme") === "light") {
-      light()
+      //light()
+      currentTheme = "light"
     } else {
       dark()
+      currentTheme = "dark"
     }
+    console.log(currentTheme)
     function dark() {
+      $("body").hide()
+      $("body").fadeIn(2000)
+      $(".theme-icon").removeClass("fa-sun-o")
+      $(".theme-icon").addClass("fa-moon-o")
       $("a").removeClass("text-info")
       $("a").css("color", "white")
-      $("body").css("background-color", "#4C566A");
+      $("body").css("background-color", "#4C566A")
       $("body").css("color", "white")
       $(".title").css("background-color","#3B4252")
-      $("span").css("color", "white")
+      $("span").addClass("white-text")
       $(".button-front").css("background", "#F72119")
       $(".button-front-2").css("background", "#4D4DFF")
       $(".button-front-3").css("background", "#31D618")
       $(".button-front-4").css("background", "#C9CF1F")
+      currentTheme = "dark"
+    }
+    function light() {
+      $("body").hide()
+      $("body").fadeIn(2000)
+      $(".theme-icon").removeClass("fa-moon-o")
+      $(".theme-icon").addClass("fa-sun-o")
+      $("a").addClass("text-info")
+      $("body").css("background-color", "#FFFFFF")
+      $("body").css("color", "black")
+      $(".title").css("background-color","#EEEEEE")
+      $("span").removeClass("white-text")
+      $(".button-front").css("background", "#E03C31")
+      $(".button-front-2").css("background", "#001489")
+      $(".button-front-3").css("background", "#007749")
+      $(".button-front-4").css("background", "#FFB81C")
+      currentTheme = "light"
+    }
+    function switchTheme() {
+      if (currentTheme === "light") {
+        dark()
+      } else {
+        light()
+      }
     }
 </script>
 </html>
