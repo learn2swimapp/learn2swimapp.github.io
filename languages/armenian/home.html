@@ -22,13 +22,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js" integrity="sha512-kwtW9vT4XIHyDa+WPb1m64Gpe1jCeLQLorYW1tzT5OL2l/5Q7N0hBib/UNH+HFVjWgGzEIfLJt0d8sZTNZYY6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Poppins font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="icon" href="/assets/flags/albania.png" type="image/x-icon">
-    <title>Albanian Home Page</title>
+    <link rel="icon" href="/assets/flags/armenia.png" type="image/x-icon">
+    <title>Armenian Home Page</title>
 </head>
 <body class="body">
     <!-- title -->
     <div class="title">
-        <h1 class="title-text"><b><span style="color:#DA291C" class="red-title">Alba</span>nian</b> Language Home Page 🇦🇱<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;cursor:grab;" class="fa fa-sun-o theme-icon" onclick="switchTheme()"></i></h1>
+        <h1 class="title-text"><b><span style="color:#D90012" class="red-title">Arm</span><span style="color:#001489" class="blue-title">eni</span><span style="color:#FF9E1B" class="orange-title">an</span></b> Language Home Page 🇦🇲<span class="version">v0.0.1</span><i style="float:right;margin-top:.75%;cursor:grab;" class="fa fa-sun-o theme-icon" onclick="switchTheme()"></i></h1>
     </div>
     <!-- main content -->
     <div class="main">
@@ -43,6 +43,24 @@
     Count to 10 Quiz <i class="fa fa-plus"></i>
   </span>
 </button>
+<br><br>
+<!-- days of the week quiz -->
+<button class="button-pushable" role="button" onclick="window.location.replace('/')">
+    <span class="button-shadow"></span>
+    <span class="button-edge-2"></span>
+    <span class="button-front-2 text">
+      Days of the Week Quiz <i class="fa fa-calendar"></i>
+    </span>
+  </button>
+<br><br>
+<!-- month names quiz -->
+<button class="button-pushable" role="button" onclick="window.location.replace('/')">
+    <span class="button-shadow"></span>
+    <span class="button-edge-3"></span>
+    <span class="button-front-3 text">
+      Month Names <i class="fa fa-calendar"></i>
+    </span>
+  </button>
 <br><br>
     </div><!-- stats -->
     </div>
@@ -103,7 +121,7 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  background-color: #991d14;
+  background-color: #a3000d;
 }
 
 .button-front {
@@ -113,7 +131,61 @@
   border-radius: 12px;
   font-size: 1.1rem;
   color: white;
-  background: #DA291C;
+  background: #D90012;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-edge-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #00106e;
+
+}
+
+.button-front-2 {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #001489;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-edge-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #d37a00;
+
+}
+
+.button-front-3 {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #FF9E1B;
   will-change: transform;
   transform: translateY(-4px);
   transition:
@@ -124,6 +196,20 @@
 
 @media (min-width: 768px) {
   .button-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-front-2 {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-front-3 {
     font-size: 1.25rem;
     padding: 12px 42px;
   }
@@ -142,7 +228,33 @@
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
+.button-pushable:hover .button-front-2 {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pushable:hover .button-front-3 {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
 .button-pushable:active .button-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-pushable:active .button-front-2 {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-pushable:active .button-front-3 {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
@@ -309,8 +421,10 @@
       $("span").animate({color: "white"})
       $("a").removeClass("text-info")
       $("a").animate({color: "white"})
-      $(".button-front").animate({backgroundColor: '#ed1008'})
-      $(".button-edge").animate({backgroundColor: "#be0d06"})
+      $(".button-front").animate({backgroundColor: '#F72119'})
+      $(".button-front-2").animate({backgroundColor: '#4D4DFF'})
+      $(".button-front-3").animate({backgroundColor: '#FFB619'})//#FF5F1F
+      //add button edges
       //$("body").css("color", "white")
       //$(".title").css("background-color","#3B4252")
       currentTheme = "dark"
@@ -326,9 +440,13 @@
       $("body").animate({color: "black"})
       $(".title").animate({backgroundColor: "#EEEEEE"})
       //fix spans
-      $(".red-title").animate({color: "#DA291C"})
-      $(".button-front").animate({backgroundColor: '#DA291C'})
-      $(".button.edge").animate({backgroundColor: "#991d14"})
+      $(".red-title").animate({color: "#D90012"})
+      $(".blue-title").animate({color: "#001489"})
+      $(".orange-title").animate({color: "#FF9E1B"})
+      $(".button-front").animate({backgroundColor: '#D90012'})
+      $(".button-front-2").animate({backgroundColor: '#001489'})
+      $(".button-front-3").animate({backgroundColor: '#FF9E1B'})
+      //add button edge changes
       $(".version").animate({color: "#9897a9"})
       currentTheme = "light"
     }
